@@ -8,6 +8,7 @@ const saltRounds = 12;
 const myPlaintextPassword = 'sUperpassw0rd!';
 const someOtherPlaintextPassword = 'pass123';
 
+const bcrypt = require('bcrypt')
 
 //START_ASYNC -do not remove notes, place code between correct pair of notes.
 
@@ -50,4 +51,6 @@ const someOtherPlaintextPassword = 'pass123';
 
 
 
-app.listen(process.env.PORT || 3000, () => {});
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`Server running at port ${process.env.PORT || 3000}`)
+});
